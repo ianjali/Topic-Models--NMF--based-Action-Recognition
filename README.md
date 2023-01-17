@@ -10,4 +10,18 @@
 * clustering.py
   * ***extract_vec_points*** 
       * extract optical flow vectors i.e magnitude and angle of consecutive frames for all videos in training dataset
-      *   
+  * Normalize the mag and ang vectors 
+  * ***make_codebook***
+      * will provide the dataframe(pass mag and ang separately) representing the input space points and the number of clusters to be formed
+      * to find the clusters using Kmeans  
+      * returns the k means object which would contains the clusters to form a codebook
+      
+* In the generated codebook, the cluster centers represents vocabulary words
+* create_bovw.py
+  * ***create_bovw_traindf***
+    * pass kmeans object of both angle and magnitude 
+    * create a dataframe of size n_videos * n_clusters for mag,ang
+    * make bag of words vectors for all videos
+    * normalize the matrix
+    *
+* 
